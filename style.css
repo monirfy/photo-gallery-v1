@@ -1,0 +1,104 @@
+/* 
+* Template Name: Photo Gallery With CSS Grid
+* Author: Monir H
+* Author URI: http://monirh.com
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+}
+
+.wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Gallery */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 30px;
+}
+
+@media (max-width: 768px){
+    .gallery{
+        grid-gap: 10px;
+    }
+}
+
+
+.gallery__item--1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.gallery__item--2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gallery__item--3{
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+.gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+.gallery__item--5{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.gallery__item--6{
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+.gallery__item--7{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+.gallery__item--8{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 9;
+    grid-row-end: 15;
+}
+.gallery__item--9{
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 9;
+    grid-row-end: 15;
+}
+
+/* Gallery Images */
+
+.gallery__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 7px 15px rgba(0,0,0,.15);
+    padding: 7px;
+}
